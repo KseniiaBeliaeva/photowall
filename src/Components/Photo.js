@@ -4,7 +4,11 @@ class Photo extends Component {
     render() { 
         const post = this.props.post;
         return <figure className="figure">
-            <img src={post.imageLink}/>
+            <img className="photo" src={post.imageLink} alt={post.description} />
+            <figcaption><p>{post.description}</p></figcaption>
+            <div className="button-container">
+                <button className="remove-button">Remove</button>
+            </div>    
         </figure>
     }
 }
